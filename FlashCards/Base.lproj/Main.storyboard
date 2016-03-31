@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E64a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOCAB" textAlignment="center" lineBreakMode="clip" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8SM-xN-TXH">
+                                <rect key="frame" x="24" y="358" width="326" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="v8O-0M-C73"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="70"/>
+                                <color key="textColor" red="0.99582105875015259" green="0.99223989248275757" blue="0.99627047777175903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="clip" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XbY-uf-fQy">
+                                <rect key="frame" x="36" y="243" width="302" height="107"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="134"/>
+                                <color key="textColor" red="0.99582105875015259" green="0.99223989248275757" blue="0.99627047777175903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="8SM-xN-TXH" firstAttribute="top" secondItem="XbY-uf-fQy" secondAttribute="bottom" constant="8" symbolic="YES" id="Bzw-qs-c5y"/>
+                            <constraint firstItem="XbY-uf-fQy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="223" id="VJ4-Po-CLq"/>
+                            <constraint firstItem="XbY-uf-fQy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Y3N-hu-dTO"/>
+                            <constraint firstItem="8SM-xN-TXH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="gA9-6r-wpv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8SM-xN-TXH" secondAttribute="bottom" constant="242" id="wCl-MR-Gf4"/>
+                            <constraint firstItem="XbY-uf-fQy" firstAttribute="centerX" secondItem="8SM-xN-TXH" secondAttribute="centerX" id="xJ1-SI-pnk"/>
+                            <constraint firstItem="XbY-uf-fQy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="yot-aN-5Nk"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Zkj-j2-KJ2" appends="YES" id="82c-CJ-OKv"/>
+                        </connections>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="XbY-uf-fQy" id="bNp-Xk-PTI"/>
+                        <outlet property="vocabText" destination="8SM-xN-TXH" id="SB8-UY-Cu3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Zkj-j2-KJ2">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="oxW-jW-8Bb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="402.5" y="445.5"/>
+        </scene>
+    </scenes>
+</document>
